@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container > h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: #666;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: #eef6ee;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field:focus {
+    outline: 2px solid #2E8B57;
+    border-color: #2E8B57;
+}
+
+.button, .back-button {
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.button:hover, .back-button:hover {
+    background: linear-gradient(to right, #45a049, #1e7045);
+}
+
+.button:focus, .back-button:focus {
+    outline: 2px solid #2E8B57;
+    outline-offset: 2px;
+}

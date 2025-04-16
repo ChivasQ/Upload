@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${filer.getOriginalName()}">Перегляд аудіо</title>
+    <link rel="stylesheet" th:href="@{/css/video.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+</head>
+<body>
+    <nav>
+        <h1>Upload.com</h1>
+        <div>
+            <a href="/upload">Головна</a>
+            <a href="/upload">Завантажити</a>
+            <a href="/about">Про нас</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <video controls>
+            <source th:src="@{'/storage/' + ${filer.getOriginalName()}}" type="video/mp4">
+        </video>
+
+        <aside>
+            <p th:text="${'ID: ' + filer.getId()}"></p>
+            <p th:text="${'Name: ' + filer.getOriginalName()}"></p>
+            <p th:text="${'Content Type: ' + filer.getContentType()}"></p>
+            <button class="button" onclick="window.location.href='/'">Скачати файл</button>
+            <button onclick="window.history.back()" class="back-button">← Повернутися</button>
+        </aside>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Upload.com — Усі права захищено</p>
+    </footer>
+</body>
+</html>

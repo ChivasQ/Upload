@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Перегляд файлу</title>
+    <link rel="stylesheet" th:href="@{/css/file.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+</head>
+<body>
+    <nav>
+        <h1>Upload.com</h1>
+        <div>
+            <a href="/upload">Головна</a>
+            <a href="/upload">Завантажити</a>
+            <a href="/about">Про нас</a>
+        </div>
+    </nav>
+    <div class="container">
+        <img th:src="@{/images/icons/zip_icon.png}" alt="ZIP Icon" class="file-icon">
+        <section>
+            <h2 th:text="${filer.getOriginalName()}"></h2>
+
+            <div class="file-info">
+                <p th:text="${'ID: ' + filer.getId()}"></p>
+                <p th:text="${'Name: ' + filer.getOriginalName()}"></p>
+                <p th:text="${'Content Type: ' + filer.getContentType()}"></p>
+            </div>
+        </section>
+        <button class="button" onclick="window.location.href='/'">Скачати файл</button>
+        <button onclick="window.history.back()" class="back-button">← Повернутися</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Upload.com — Усі права захищено</p>
+    </footer>
+</body>
+</html>

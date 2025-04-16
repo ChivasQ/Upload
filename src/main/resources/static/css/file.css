@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.test {
+    margin-top:1500px;
+    margin-top:1500px;
+}
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.container > h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.file-icon {
+    width: 100px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.file-icon:hover {
+    transform: scale(1.05);
+}
+
+.file-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.file-info p:first-child {
+    font-weight: bold;
+    color: #000;
+}
+
+.file-info p:last-child {
+    font-style: italic;
+    color: #888;
+}
+
+.button, .back-button {
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.button:hover, .back-button:hover {
+    background: linear-gradient(to right, #45a049, #1e7045);
+}
+
+.button:focus, .back-button:focus {
+    outline: 2px solid #2E8B57;
+    outline-offset: 2px;
+}

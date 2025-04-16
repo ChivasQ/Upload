@@ -1,0 +1,34 @@
+nav {
+    position: absolute;
+    top:0;
+    background-color: #2E8B57;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav h1 {
+    font-size: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+footer {
+    position: absolute;
+    bottom:10px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}

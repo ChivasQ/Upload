@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.container > p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+}
+
+video:focus {
+    border: 2px solid #2E8B57;
+}
+
+.button, .back-button {
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.button:hover, .back-button:hover {
+    background: linear-gradient(to right, #45a049, #1e7045);
+}
+
+.back-button:focus {
+    outline: 2px solid #2E8B57;
+    outline-offset: 2px;
+}
+
+.container video {
+    flex: 2;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+aside {
+    flex: 1;
+}
+
+aside > p {
+    margin: 0.5rem 0;
+}
+

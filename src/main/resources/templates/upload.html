@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/upload.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <title>Upload.com</title>
+</head>
+<body>
+
+    <nav>
+        <h1>Upload.com</h1>
+        <div>
+            <a href="/upload">Головна</a>
+            <a href="/upload">Завантажити</a>
+            <a href="/about">Про нас</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Завантаження файлу</h2>
+        <form method="POST" enctype="multipart/form-data" action="/">
+            <div class="drop-zone">Перетягніть файли сюди</div>
+            <input type="file" name="file" class="input-field" required>
+            <input type="submit" value="Завантажити" class="button">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Upload.com — Усі права захищено</p>
+    </footer>
+</body>
+</html>
