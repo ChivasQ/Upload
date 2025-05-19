@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Grid Layout Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background: #4CAF50;
+            border-radius: 15px;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        aside {
+            grid-area: sidebar;
+            border-radius: 15px;
+            background: #f2f2f2;
+            padding: 15px;
+        }
+
+        main {
+            grid-area: main;
+            background: #fff;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #333;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px), (orientation: portrait) {
+            body {
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr auto auto;
+            }
+        }
+
+        .corner-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, purple, gold);
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .corner-box:hover {
+            transform: scale(1.4) rotate(20deg);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <aside>aside</aside>
+    <main>
+        <h2>h2</h2>
+        <p>text</p>
+    </main>
+    <footer>footer</footer>
+    <div class="corner-box"></div>
+</body>
+</html>

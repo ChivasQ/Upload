@@ -5,15 +5,15 @@
 }
 
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.container {
+.upload {
     background: white;
     padding: 30px;
     border-radius: 10px;
@@ -21,14 +21,15 @@ body {
     width: 90%;
     max-width: 400px;
     text-align: center;
+    place-self: center;
 }
 
-.container > h2 {
+.upload__title {
     margin-bottom: 20px;
     color: #333;
 }
 
-.drop-zone {
+.upload__drop-zone {
     border: 2px dashed #ccc;
     padding: 20px;
     margin-bottom: 10px;
@@ -37,11 +38,11 @@ body {
     transition: background 0.3s ease;
 }
 
-.drop-zone:hover {
+.upload__drop-zone:hover {
     background-color: #eef6ee;
 }
 
-.input-field {
+.upload__input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -49,12 +50,12 @@ body {
     border-radius: 5px;
 }
 
-.input-field:focus {
+.upload__input:focus {
     outline: 2px solid #2E8B57;
     border-color: #2E8B57;
 }
 
-.button, .back-button {
+.upload__button {
     background: linear-gradient(to right, #4CAF50, #2E8B57);
     color: white;
     padding: 10px;
@@ -67,11 +68,11 @@ body {
     margin-top: 10px;
 }
 
-.button:hover, .back-button:hover {
+.upload__button:hover {
     background: linear-gradient(to right, #45a049, #1e7045);
 }
 
-.button:focus, .back-button:focus {
+.upload__button:focus {
     outline: 2px solid #2E8B57;
     outline-offset: 2px;
 }

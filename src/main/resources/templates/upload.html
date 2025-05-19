@@ -8,26 +8,29 @@
     <title>Upload.com</title>
 </head>
 <body>
-
     <nav>
         <h1>Upload.com</h1>
-        <div>
+        <button class="nav__button">&#9776;</button>
+        <div class="nav__links">
             <a href="/upload">Головна</a>
             <a href="/upload">Завантажити</a>
             <a href="/about">Про нас</a>
         </div>
     </nav>
 
-    <div class="container">
-        <h2>Завантаження файлу</h2>
+    <div class="upload">
+        <h2 class="upload__title">Завантаження файлу</h2>
         <form method="POST" enctype="multipart/form-data" action="/">
-            <div class="drop-zone">Перетягніть файли сюди</div>
-            <input type="file" name="file" class="input-field" required>
-            <input type="submit" value="Завантажити" class="button">
+            <div class="upload__drop-zone">Перетягніть файли сюди</div>
+            <input type="file" name="file" class="upload__input" required>
+            <input type="submit" value="Завантажити" class="upload__button">
         </form>
     </div>
+
     <footer>
         <p>&copy; 2025 Upload.com — Усі права захищено</p>
     </footer>
+
+    <script th:src="@{/js/sandwich_menu.js}"></script>
 </body>
 </html>

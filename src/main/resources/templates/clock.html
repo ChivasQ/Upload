@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Годинник на CSS</title>
+</head>
+    <body>
+        <div class="clock">
+            <div class="base hour"></div>
+            <div class="base minute"></div>
+            <div class="base second"></div>
+            <div class="base center_circle"></div>
+        </div>
+    </body>
+
+    <style>
+        .clock {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 10px solid #2E8B57;
+            border-radius: 50%;
+            background: white;
+        }
+        .base {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            background: #2E8B57;
+            border-radius: 5px;
+        }
+        .center_circle {
+            bottom: 49.5%;
+            left: 48.5%;
+            border-radius: 50%;
+            width: 3%;
+            height: 3%;
+            background: #2E8B57;
+        }
+        .base.hour {
+            width: 6px;
+            height: 70px;
+            animation: rotate-hour 360s linear infinite;
+        }
+
+        .base.minute {
+            width: 4px;
+            height: 100px;
+            animation: rotate-minute 60s linear infinite;
+        }
+
+        .base.second {
+            width: 2px;
+            height: 120px;
+            background: red;
+            animation: rotate-second 1s linear infinite;
+        }
+
+        @keyframes rotate-hour {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate-minute {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate-second {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</html>

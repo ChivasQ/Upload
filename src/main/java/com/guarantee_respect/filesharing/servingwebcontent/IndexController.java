@@ -35,8 +35,14 @@ public class IndexController {
     public String test(Model model) {
         return "test";
     }
-
-
+    @GetMapping("/clock")
+    public String clock(Model model) {
+        return "clock";
+    }
+    @GetMapping("/grid")
+    public String grid(Model model) {
+        return "grid";
+    }
     @PostMapping("/")
     public String uploadPost(@RequestParam("file") MultipartFile file,
                              RedirectAttributes redirectAttributes) {
